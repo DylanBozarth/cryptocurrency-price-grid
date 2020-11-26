@@ -13,21 +13,23 @@ const App = () => {
     const [rowData, setRowData] = useState([]);
     // https://blockchain.info/ticker
     useEffect(() => {
-            fetch('https://raw.githubusercontent.com/ag-grid/ag-grid/master/grid-packages/ag-grid-docs/src/sample-data/rowData.json')
+            fetch('https://jsonplaceholder.typicode.com/users')
             .then(result => result.json())
             .then(rowData => setRowData(rowData))
+            console.log(rowData)
          }, []);
 
     return (
-        <div className="ag-theme-alpine-dark container " style={ { height: 400, width: 600 } }>
+        <div className="container">
+        <div className="ag-theme-alpine-dark container " style={{width: '700px', height: '400px' }} >
             <AgGridReact
             rowSelection="multiple"
                 rowData={rowData}>
-                <AgGridColumn field="make"  filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
-                <AgGridColumn field="model" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
-                <AgGridColumn field="price" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
+                <AgGridColumn field="name"  filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
+                <AgGridColumn field="username" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
+                <AgGridColumn field="email" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
             </AgGridReact>
-        </div>
+        </div></div>
     );
 };
 
