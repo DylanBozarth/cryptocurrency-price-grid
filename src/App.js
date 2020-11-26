@@ -20,13 +20,13 @@ const App = () => {
          }, []);
 
     return (
-        <div className="container">
+        <div className="container-fluid">
         <div className="ag-theme-alpine-dark container " style={{width: '700px', height: '400px' }} >
             <AgGridReact
             rowSelection="multiple"
                 rowData={rowData}>
                 <AgGridColumn field="name"  filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
-                <AgGridColumn field="username" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
+                <AgGridColumn field="phone" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
                 <AgGridColumn field="email" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
             </AgGridReact>
         </div></div>
