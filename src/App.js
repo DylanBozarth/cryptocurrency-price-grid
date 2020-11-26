@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 
+import "./App.css";
 import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine-dark.css';
 
 
 const App = () => {
@@ -12,11 +13,14 @@ const App = () => {
     const [rowData, setRowData] = useState([
         {make: "Toyota", model: "Celica", price: 35000},
         {make: "Ford", model: "Mondeo", price: 32000},
-        {make: "Porsche", model: "Boxter", price: 72000}
+        {make: "Porsche", model: "Boxter", price: 72000},
+        {make: "Posdadsrsche", model: "Boxter", price: 72000},
+        {make: "Posad", model: "Boxter", price: 72000},
+        {make: "Porasdasdche", model: "Boxter", price: 72000}
     ]);
 
     return (
-        <div className="ag-theme-alpine" style={ { height: 400, width: 600 } }>
+        <div className="ag-theme-alpine-dark container " style={ { height: 400, width: 600 } }>
             <AgGridReact
                 rowData={rowData}>
                 <AgGridColumn field="make"></AgGridColumn>
