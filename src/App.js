@@ -11,9 +11,9 @@ const App = () => {
     const [gridApi, setGridApi] = useState(null);
     const [gridColumnApi, setGridColumnApi] = useState(null);
     const [rowData, setRowData] = useState([]);
-    // https://blockchain.info/ticker
+  
     useEffect(() => {
-            fetch('https://jsonplaceholder.typicode.com/users')
+            fetch('https://api.coingecko.com/api/v3/exchange_rates')
             .then(result => result.json())
             .then(rowData => setRowData(rowData))
             console.log(rowData)
@@ -25,9 +25,9 @@ const App = () => {
             <AgGridReact
             rowSelection="multiple"
                 rowData={rowData}>
-                <AgGridColumn field="name"  filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
-                <AgGridColumn field="phone" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
-                <AgGridColumn field="email" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
+                <AgGridColumn field="btc"  filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
+                <AgGridColumn field="eth" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
+                <AgGridColumn field="ltc" filter={true} checkboxSelection={true} sortable={true}></AgGridColumn>
             </AgGridReact>
         </div></div>
     );
