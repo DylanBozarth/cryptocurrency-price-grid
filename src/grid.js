@@ -3,7 +3,7 @@ import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 
 import 'ag-grid-enterprise';
 import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine-dark.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
 
 export const Grid = () => {
@@ -24,7 +24,7 @@ export const Grid = () => {
     return (
         
           <div
-            className="ag-theme-alpine-dark container-fluid grid"
+            className="ag-theme-alpine container-fluid grid"
           >
             <AgGridReact rowSelection="multiple" className="container-fluid" rowData={rowData}>
               <AgGridColumn

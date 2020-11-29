@@ -1,7 +1,17 @@
 .body {
   background-color: lightblue !important;
-  height: 100vh; 
+  
 }
 .grid {
-  height: 100vw;
+  height: 100vh;
+}
+.banner {
+  width: 100%;
+}
+.titlething {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+.grid-container {
+
 }

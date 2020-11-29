@@ -11,9 +11,10 @@ const App = () => {
   return (
     <div className="body">
       <div className="container-fluid">
-        <h1 className="text-center">Latest prices for Cryptocurrency exchange </h1>
+          
+        <h1 className="text-center titlething">Latest prices for Cryptocurrency exchange </h1>
       </div>
-      <div className="container-fluid">
+      <div className="grid-container container">
         <Grid />{" "}
       </div>
     </div>
