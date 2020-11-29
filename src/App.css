@@ -1,5 +1,7 @@
-.container-fluid {
-  background-color: darkslateblue !important;
+.body {
+  background-color: lightblue !important;
   height: 100vh; 
-  width: 100%;
+}
+.grid {
+  height: 100vw;
 }
